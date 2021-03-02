@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Temp Nav Bar-->
+      <div class="row">
+        <div
+          class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+          style="background-color: red"
+        >
+          <button onclick="Select()">His</button>
+          <button onclick="GenerateRecipeHTML()">Hers</button>
+          <button>Theirs</button>
+        </div>
+      </div>
+      <!-- Temp Nav Bar End -->
+
+      <!-- Temp Selection for recipe -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <select id="displayYest" class="form-control"></select>
+        </div>
+      </div>
+      <!-- Temp Selection for recipe End -->
+
+      <div id="recipe">
+        <!-- Recipe Here -->
+
+        <!-- Recipe Here -->
+
+        <!-- Place Holder for recipe (Initial Styling) -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Name Of recipe</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img style="width: 100%; height: 10vw" />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 offset-1">
+            <h3>Souce</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-2">
+            <h6>Ingredients</h6>
+            <ul>
+              <li>tamato</li>
+              <li>tamato</li>
+              <li>tamato</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-2">
+            <h6>Method</h6>
+            <ul>
+              <li>Squach IT</li>
+              <li>
+                The quick brown fox jumps over the lazy dog. The quick brown fox
+                jumps over the lazy dog. The quick brown fox jumps over the lazy
+                dog. The quick brown fox jumps over the lazy dog. The quick
+                brown fox jumps over the lazy dog. The quick brown fox jumps
+                over the lazy dog. The quick brown fox jumps over the lazy dog.
+                The quick brown fox jumps over the lazy dog.
+              </li>
+              <li>Squach IT</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Place Holder for recipe End -->
+      </div>
+    </div>
+  </body>
+  <script>
+    function Select() {
+      let exampleRecipe = {
+        name: "",
+        image: "",
+        category: "",
+        method: [
+          { Ingredients: [], method: [] },
+          { Ingredients: [], method: [] },
+        ],
+        tags: [],
+        owner: "",
+        tested: "",
+      };
+
+      exampleRecipe.name = "Oats";
+      exampleRecipe.type = "Koekies";
+      exampleRecipe.method = [
+        {
+          partName: "",
+          Ingredients: ["Oats", "Sugar"],
+          method: ["Throw all together", "burn it"],
+        },
+      ];
+      exampleRecipe.tags = ["Sweet", "Quick"];
+      exampleRecipe.tested = "No";
+      exampleRecipe.owner = "Him";
+      html = "<ul>";
+      html += "<li>";
+      html += exampleRecipe.method[0].method[0];
+      html += "</li>";
+      html += "<li>";
+      html += exampleRecipe.method[0].method[1];
+      html += "</li>";
+      html += "</ul>";
+      document.getElementById("meth").innerHTML = html;
+    }
+
+    function GenerateRecipeHTML() {
+      let recipe = {
+        name: "",
+        image: "",
+        category: "",
+        method: [
+          { Ingredients: [], method: [] },
+          { Ingredients: [], method: [] },
+        ],
+        tags: [],
+        owner: "",
+        tested: "",
+      };
+
+      recipe.name = "Oats";
+      recipe.type = "Koekies";
+      recipe.part = [
+        {
+          name: "Sconce",
+          Ingredients: ["Oats", "Sugar"],
+          method: ["Throw all together", "burn it"],
+        },
+        {
+          name: "Filling",
+          Ingredients: ["Oats", "Sugar"],
+          method: ["Throw all together", "burn it"],
+        },
+      ];
+      recipe.tags = ["Sweet", "Quick"];
+      recipe.tested = "No";
+      recipe.owner = "Him";
+
+      //===============================Title===============================\\
+      let recipeHtml = '<div class="row">';
+      recipeHtml += '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">';
+      recipeHtml += "<h1>" + recipe.name + "</h1>";
+      recipeHtml += "</div>";
+      recipeHtml += "</div>";
+      //===================================================================\\
+
+      //===============================Image===============================\\
+
+      recipeHtml += '<div class="row">';
+      recipeHtml += '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">';
+      recipeHtml +=
+        '<img src="' + recipe.image + '" style="width: 100%; height: 10vw" />';
+      recipeHtml += "</div>";
+      recipeHtml += "</div>";
+      recipeHtml += "<br />";
+
+      //===================================================================\\
+
+      //=======================Loop For Recipe Objects=======================\\
+      recipe.part.forEach((element) => {
+        recipeHtml += '<div class="row">';
+        recipeHtml +=
+          '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 offset-1">';
+        recipeHtml += "<h3>" + element.name + "</h3>";
+        recipeHtml += "</div>";
+        recipeHtml += "</div>";
+        recipeHtml += '<div class="row">';
+        recipeHtml +=
+          '<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-2">';
+        recipeHtml += "<h6>Ingredients</h6>";
+        recipeHtml += "<ul>";
+        //===================================================================\\
+
+        //========================Loop For Ingredients========================\\
+        element.Ingredients.forEach((Ingredient) => {
+          recipeHtml += "<li>" + Ingredient + "</li>";
+        });
+        recipeHtml += "</ul>";
+        recipeHtml += "</div>";
+        recipeHtml += "</div>";
+
+        recipeHtml += '<div class="row">';
+        recipeHtml +=
+          '<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-2">';
+        recipeHtml += "<h6>Method</h6>";
+        recipeHtml += "<ul>";
+        //===================================================================\\
+
+        //==========================Loop For Methods==========================\\
+        element.method.forEach((Step) => {
+          recipeHtml += "<li>" + Step + "</li>";
+        });
+        recipeHtml += "</ul>";
+        recipeHtml += "</div>";
+        recipeHtml += "</div>";
+      });
+
+      //===================================================================\\
+
+      //===========================Replace Recipe===========================\\
+      document.getElementById("recipe").innerHTML = recipeHtml;
+      //===================================================================\\
+    }
+  </script>
+</html>
