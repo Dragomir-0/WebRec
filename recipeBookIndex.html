@@ -49,5 +49,25 @@
       }
     }
   
+    function getItemsInCat(cat) {
+      itemHtml = "";
+      arrayOfItems.forEach((element) => {
+        if (cat == element[0]) {
+          itemHtml += '<div class="row">';
+          itemHtml +=
+            '<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-2" >';
+          itemHtml +=
+            '<button class="btn btn-block" style="background-color: #' +
+            element[1] +
+            ';">' +
+            element[2] +
+            "</button>";
+          itemHtml += "</div>";
+          itemHtml += "</div>";
+        }
+      });
+      document.getElementById("index").innerHTML = itemHtml;
+    }
+    getCat("her");
   </script>
   
