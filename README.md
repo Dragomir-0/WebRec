@@ -171,12 +171,12 @@ Project Link: [https://github.com/Dragomir-0/WebRec](https://github.com/Dragomir
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Dragomir-0/WebRec.svg?style=for-the-badge
 [contributors-url]: https://github.com/Dragomir-0/WebRec/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/Dragomir-0/WebRec.svg?style=for-the-badge
 [forks-url]: https://github.com/Dragomir-0/WebRec/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Dragomir-0/WebRec.svg?style=for-the-badge
 [stars-url]: https://github.com/Dragomir-0/WebRec/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Dragomir-0/WebRec.svg?style=for-the-badge
 [issues-url]: https://github.com/Dragomir-0/WebRec/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Dragomir-0/WebRec.svg?style=for-the-badge
 [license-url]: https://github.com/Dragomir-0/WebRec/blob/main/LICENSE.txt
 [product-screenshot]: images/screenshot.png
