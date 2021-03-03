@@ -10,3 +10,44 @@
   crossorigin="anonymous"
 ></script>
 <div class="container-fluid" id="index"></div>
+<script>
+    herArry = [
+      "Category1#ff0000#Name",
+      "Category1#ff0000#Name",
+      "Category2#0000ff#Name",
+      "Category2#0000ff#Name",
+      "Category3#ffff00#Name",
+    ];
+    arrayOfItems = [];
+    function getCat(user) {
+      if (user == "her") {
+        catHtml = "";
+        listedCat = [];
+        herArry.forEach((element) => {
+          let data = element.split("#");
+          if (!listedCat.includes(data[0])) {
+            catHtml += '<div class="row">';
+            catHtml +=
+              '<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-2" >';
+            catHtml +=
+              '<button class="btn btn-block" onclick="getItemsInCat(`' +
+              data[0] +
+              '`)" style="background-color: #' +
+              data[1] +
+              ';">' +
+              data[0] +
+              "</button>";
+            catHtml += "</div>";
+            catHtml += "</div>";
+  
+            listedCat = data[0];
+          }
+          arrayOfItems.push(data);
+        });
+  
+        document.getElementById("index").innerHTML = catHtml;
+      }
+    }
+  
+  </script>
+  
