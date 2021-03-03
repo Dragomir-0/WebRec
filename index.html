@@ -27,7 +27,7 @@
         >
           <button onclick="Select()">His</button>
           <button onclick="GenerateRecipeHTML()">Hers</button>
-          <button>Theirs</button>
+          <button onclick="getFile('')">Theirs</button>
         </div>
       </div>
       <!-- Temp Nav Bar End -->
@@ -39,7 +39,9 @@
         </div>
       </div>
       <!-- Temp Selection for recipe End -->
+<div id="indexOfRec">
 
+</div>
       <div id="recipe">
         <!-- Recipe Here -->
 
@@ -94,6 +96,13 @@
       </div>
     </div>
   </body>
+  <script> 
+    function getFile(who){
+      $("#indexOfRec").load("recipeBookIndex.html"); 
+      
+    }
+    
+    </script> 
   <script>
     function Select() {
       let exampleRecipe = {
