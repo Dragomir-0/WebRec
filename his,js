@@ -1,0 +1,25 @@
+let arrhis = [
+  {
+    name: "Fried IceCream",
+    image: "",
+    category: "Pudding",
+    method: [
+      { Name: "Ice Cream", Ingredients: ['2l Ice Cream','3 Eggs', 'Milk','1 Packet of tennis biscuts'], method: ['Step one','step two'] },
+      { Name: "Caramel Sauce", Ingredients: ['Test 1', 'test 2'], method: ['Step1.1','Step 2.2'] },
+    ],
+    tags: ['Sweet','Long'],
+    owner: "His",
+    tested: "No",
+  },{
+    name: "Fried IceCream 2.0",
+    image: "",
+    category: "Puddings",
+    method: [
+      { Name: "Ice Cream", Ingredients: ['2l Ice Cream','3 Eggs', 'Milk','1 Packet of tennis biscuts'], method: ['Step one','step two'] },
+      { Name: "Caramel Sauce", Ingredients: ['Test 1', 'test 2'], method: ['Step1.1','Step 2.2'] },
+    ],
+    tags: ['Sweet','Long'],
+    owner: "His",
+    tested: "No",
+  },
+];
